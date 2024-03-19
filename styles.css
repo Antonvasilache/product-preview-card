@@ -1,0 +1,145 @@
+* {
+  font-size: 14px;
+  margin: 0;
+}
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--Cream);
+}
+
+.container {
+  max-width: 560px;
+  background-color: var(--White);
+  border-radius: 0.8rem;
+}
+
+.content {
+  display: flex;
+}
+
+.content-img-desktop {
+  width: 50%;
+  border-radius: 0.8rem 0 0 0.8rem;
+}
+
+.content-img-mobile {
+  display: none;
+}
+
+.content-txt {
+  display: grid;
+  place-items: center;
+  padding: 1.8rem;
+}
+
+.content-header,
+.content-title,
+.content-description,
+.content-price {
+  justify-self: left;
+}
+
+.content-header {
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.content-title {
+  font-family: "Fraunces";
+  font-size: 2.2rem;
+  color: var(--Very-dark-blue);
+}
+
+.content-description {
+  color: var(--Dark-grayish-blue);
+  padding: 1rem 0;
+}
+
+.content-price {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.content-price-discount {
+  font-family: "Fraunces";
+  font-size: 2.2rem;
+  color: var(--Dark-cyan);
+}
+
+.content-price-regular {
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.content-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  border: none;
+  padding: 1rem 0;
+  border-radius: 0.6em;
+}
+
+.content-btn:active,
+.content-btn:hover,
+.content-btn:focus {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(158, 36%, 37%) 0%,
+    hsl(158, 36%, 17%) 0%
+  );
+}
+
+.content-btn-txt {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.content-btn-img {
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+@media (max-width: 30em) {
+  .container {
+    margin: 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content-img-desktop {
+    display: none;
+  }
+
+  .content-img-mobile {
+    display: block;
+    width: 100%;
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+
+  .content-txt {
+    gap: 0.6rem;
+  }
+}
